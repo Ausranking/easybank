@@ -8,25 +8,38 @@ const Footer = () => {
   return (
     <footer className="bg-dark-blue w-full ">
       <div className="align-body py-10 grid gap-5  max-sm:place-items-center md:grid-cols-3 [&>*]:max-sm:text-center ">
-        <div>
-           <Logo location="footer" />
-        <div className="grid gap-3 grid-flow-col w-max p-1 md:mt-5">
-          {socialIcons.map((icon) => (
-            <li key={icon.id}>
-              <Link href={icon.url}>
-                <Image src={icon.icon} height={20} width={23} />
-              </Link>
-            </li>
-          ))}
+        <div className="grid gap-5">
+          <Logo location="footer" />
+          <div className="grid gap-3 grid-flow-col w-max p-1 md:mt-5">
+            {socialIcons.map((icon) => (
+              <li key={icon.id}>
+                <Link href={icon.url}>
+                  <Image
+                    src={icon.icon}
+                    height={20}
+                    width={23}
+                    alt="social-link"
+                    className="hover:scale-110"
+                  />
+                </Link>
+              </li>
+            ))}
+          </div>
         </div>
-        </div>
-       
 
-        <section className="w-28 flex gap-5 flex-shrink ring-1">
-          {footerLinks.map((link) => (
+        <section className=" grid md:grid-cols-2">
+          {footerLinks.slice(0, 3).map((link) => (
             <li
               key={link.id}
-              className="py-1 fill-current hover:fill-lime-green"
+              className="py-1 fill-current hover:text-lime-green"
+            >
+              <Link href={link.url}>{link.text}</Link>
+            </li>
+          ))}
+          {footerLinks.slice(3, 6).map((link) => (
+            <li
+              key={link.id}
+              className="py-1 fill-current hover:text-lime-green"
             >
               <Link href={link.url}>{link.text}</Link>
             </li>

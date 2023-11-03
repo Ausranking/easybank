@@ -15,7 +15,7 @@ const Navbar = () => {
     <header className="sticky top-0 shadow-md bg-white w-full h-20 lg:h-14 flex items-center z-10">
       <nav className="align-body relative  flex items-center justify-between">
         <Link href="/">
-          <Logo/>
+          <Logo location='header'/>
         </Link>
         {/* ....fix the navlink hover underline color and weight effect..... */}
         <div className="hidden md:block">
