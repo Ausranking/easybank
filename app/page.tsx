@@ -1,6 +1,7 @@
 import Hero from "./components/Hero"
 import Gallery from "./components/Gallery"
 import { Suspense } from 'react'
+// import ArticleSection from './components/ArticleSection';
 
 
 
@@ -11,7 +12,8 @@ const page = () => {
     <main>
       <Suspense>
         <Hero />
-      <Gallery/>
+        <Gallery />
+        {/* <ArticleSection/> */}
       </Suspense>
       
     </main>

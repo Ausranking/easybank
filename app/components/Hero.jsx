@@ -26,6 +26,7 @@ const Hero = () => {
             alt="App mockup"
             fill
             className="object-cover"
+            
           />
         </div>
       </div>
